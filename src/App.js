@@ -8,7 +8,7 @@ const App = () => {
 
   return `
     ${Header()}
-    <section>
+    <section class="container-main">
       ${Contents()}
       ${Output()}
     </section>

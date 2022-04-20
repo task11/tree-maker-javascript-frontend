@@ -1,8 +1,9 @@
 
 const Output = () => {
   return `
-    <div class="wrapper-result">
+    <div class="result-content">
       <div class="result">
+        Output :
       </div>
     </div>
   `;
