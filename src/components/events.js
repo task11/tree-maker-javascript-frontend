@@ -57,7 +57,20 @@ const printQuerySelector = (str) => {
   $result.appendChild(text);
 };
 
+const printGetElementId = (str) => {
+  const doc = transformStrToHTML(str);
+  const inputQuery = document.querySelector(".id");
+  const $result = document.querySelector(".result");
 
+  resetResult($result);
+
+  if (!inputQuery.value) {
+    alert("ID를 입력해주세요.");
+  }
+  const text = document.createTextNode(doc.getElementById(inputQuery.value).outerHTML);
+
+  $result.appendChild(text);
+};
 
 const appEventListener = () => {
   const $contentForm = document.querySelector(".content-form");
