@@ -1,14 +1,17 @@
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
+import Contents from "./components/Contents.js";
+import Output from "./components/Output.js";
 
 
 const App = () => {
 
   return `
     ${Header()}
-    <div>
-      <h1>Init Project</h1>
-    </div>
+    <section>
+      ${Contents()}
+      ${Output()}
+    </section>
     ${Footer()}
   `;
 };

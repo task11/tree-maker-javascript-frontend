@@ -105,10 +105,6 @@ body {
   line-height: 1;
 }
 
-ol,
-ul {
-  list-style: none;
-}
 
 blockquote,
 q {
@@ -126,4 +122,10 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+ol {
+  margin-left: 0;
+  padding-left: 40px;
+  line-height: 1.5;
 }
