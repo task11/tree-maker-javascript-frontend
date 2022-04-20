@@ -24,7 +24,7 @@ The purpose of this project is study and practice of DOM, Node access/search
 - Search node on your HTML
 
 ## 🏁 Getting Started
-**visit this url : [WEB SITE LINK](https://task11.github.io/tree-maker-javascript-frontend/)**
+**visit this url : [WEB SITE LINK](https://task11.github.io/tree-maker-javascript-frontend/index.html)**
 
 
 ## 🛠 Tech stack
