@@ -1,4 +1,5 @@
 import Header from "./components/Header.js";
+import Footer from "./components/Footer.js";
 
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
     <div>
       <h1>Init Project</h1>
     </div>
+    ${Footer()}
   `;
 };
 
