@@ -42,6 +42,23 @@ const resetResult = (parentNode) => {
   }
 };
 
+const printQuerySelector = (str) => {
+  const doc = transformStrToHTML(str);
+  const inputQuery = document.querySelector(".selector");
+  const $result = document.querySelector(".result");
+
+  resetResult($result);
+
+  if (!inputQuery.value) {
+    alert("CSS Selector를 입력해주세요.");
+  }
+  const text = document.createTextNode(doc.querySelector(inputQuery.value).outerHTML);
+
+  $result.appendChild(text);
+};
+
+
+
 const appEventListener = () => {
   const $contentForm = document.querySelector(".content-form");
 
@@ -49,10 +66,18 @@ const appEventListener = () => {
   const submitInput = (e) => {
     e.preventDefault();
     const $inputForm = document.querySelector(".input-form");
-    printDOMTree($inputForm.value);
+    const clickedBtn = e.target.name;
+
+    if (clickedBtn === "print") {
+      printDOMTree($inputForm.value);
+    } else if (clickedBtn === "selector") {
+      printQuerySelector($inputForm.value);
+    } else if (clickedBtn === "id") {
+      printGetElementId($inputForm.value);
+    } else return;
   };
 
-  $contentForm.addEventListener("submit", submitInput);
+  $contentForm.addEventListener("click", submitInput);
 };
 
 export default appEventListener;
