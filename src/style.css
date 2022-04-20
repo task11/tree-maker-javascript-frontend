@@ -1,0 +1,59 @@
+.container-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgrey;
+}
+
+.container-header a h1 {
+  text-align: center;
+  color: greenyellow;
+}
+
+
+.img-logo {
+  width: 100px;
+  height: 100px;
+}
+
+.header-link {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.header-link a {
+  color: black;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+ol {
+  margin-left: 0;
+  padding-left: 40px;
+  line-height: 1.5;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  background-color: tomato;
+  color: white;
+
+  border: 1px tomato solid;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 1s linear;
+}
+
+button:hover {
+  background-color: rgb(167, 53, 33);
+}
+
+input {
+  width: 300px;
+  height: 50px;
+  font-size: 50px;
+}
