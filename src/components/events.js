@@ -5,6 +5,10 @@ const transformStrToHTML = (str) => {
 };
 
 const printDOMTree = (str) => {
+  if (str === "") {
+    alert("HTML을 입력해주세요~");
+    return;
+  }
   const doc = transformStrToHTML(str);
   const $result = document.querySelector(".result");
 
@@ -43,6 +47,10 @@ const resetResult = (parentNode) => {
 };
 
 const printQuerySelector = (str) => {
+  if (str === "") {
+    alert("HTML을 입력해주세요~");
+    return;
+  }
   const doc = transformStrToHTML(str);
   const inputQuery = document.querySelector(".selector");
   const $result = document.querySelector(".result");
@@ -51,6 +59,7 @@ const printQuerySelector = (str) => {
 
   if (!inputQuery.value) {
     alert("CSS Selector를 입력해주세요.");
+    return;
   }
   const text = document.createTextNode(doc.querySelector(inputQuery.value).outerHTML);
 
@@ -58,6 +67,10 @@ const printQuerySelector = (str) => {
 };
 
 const printGetElementId = (str) => {
+  if (str === "") {
+    alert("HTML을 입력해주세요~");
+    return;
+  }
   const doc = transformStrToHTML(str);
   const inputQuery = document.querySelector(".id");
   const $result = document.querySelector(".result");
@@ -66,6 +79,7 @@ const printGetElementId = (str) => {
 
   if (!inputQuery.value) {
     alert("ID를 입력해주세요.");
+    return;
   }
   const text = document.createTextNode(doc.getElementById(inputQuery.value).outerHTML);
 
